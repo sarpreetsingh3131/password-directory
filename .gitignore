@@ -61,3 +61,6 @@ typings/
 assets/\.DS_Store
 
 \.DS_Store
+password_directory-linux-x64/
+
+release-builds/

@@ -6,18 +6,26 @@
     "private": true,
     "scripts": {
         "start": "electron .",
-        "packlinux": "build --l",
         "packmac": "build --m",
-        "packwin": "build --w"
+        "packwin": "build --w",
+        "packlinux": "electron-packager . Password Directory --asar=true --overwrite --platform=linux --arch=x64 --icon=build/icon.ico.icns --prune=true --out=release-builds"
     },
     "build": {
         "appId": "com.sarpreetsinghbuttar.passworddirectory",
         "productName": "Password Directory",
-        "asar": false
+        "asar": true,
+        "win": {
+            "icon": "build/icon.ico.ico"
+        },
+        "mac": {
+            "icon": "build/icon.ico.icns"
+        }
     },
     "author": "Sarpreet Singh Buttar",
     "license": "MIT",
     "devDependencies": {
-        "electron-builder": "^19.8.0"
+        "electron": "^1.7.9",
+        "electron-builder": "^19.8.0",
+        "electron-packager": "^9.1.0"
     }
 }
