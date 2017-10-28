@@ -1,0 +1,23 @@
+{
+    "name": "password_directory",
+    "version": "1.0.0",
+    "main": "main.js",
+    "description": "It is a simple desktop app which will help you to save your passwords.",
+    "private": true,
+    "scripts": {
+        "start": "electron .",
+        "packlinux": "build --l",
+        "packmac": "build --m",
+        "packwin": "build --w"
+    },
+    "build": {
+        "appId": "com.sarpreetsinghbuttar.passworddirectory",
+        "productName": "Password Directory",
+        "asar": false
+    },
+    "author": "Sarpreet Singh Buttar",
+    "license": "MIT",
+    "devDependencies": {
+        "electron-builder": "^19.8.0"
+    }
+}
